@@ -3,10 +3,9 @@ import {
   SynchronizationFailedError,
   getBankAccount,
 } from '.';
-import _ from 'lodash';
 
 jest.mock('lodash', () => ({
-  random: jest.fn().mockReturnValue(1)
+  random: jest.fn().mockReturnValue(1),
 }));
 
 describe('BankAccount', () => {
@@ -57,7 +56,7 @@ describe('BankAccount', () => {
     expect(secondAccount.getBalance()).toBe(20);
   });
 
-/*   test('fetchBalance should return number in case if request did not failed', async () => {
+  /*   test('fetchBalance should return number in case if request did not failed', async () => {
     const account = getBankAccount(100);
     const balance = await account.fetchBalance();
     expect(typeof balance).toBe('number');

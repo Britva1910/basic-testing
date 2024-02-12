@@ -47,8 +47,8 @@ describe('throttledGetDataFromApi', () => {
     (axios.create as jest.Mock).mockReturnValueOnce(axiosClient);
 
     const result = await throttledGetDataFromApi(relativePath);
-    jest.runAllTimers(); 
+    jest.runAllTimers();
 
     expect(result).toEqual('Test data');
   });
-})
+});

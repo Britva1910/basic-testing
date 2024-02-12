@@ -5,16 +5,16 @@ const testCases = [
   { a: -5, b: 3, action: Action.Add, expected: -2 },
   { a: 0, b: 0, action: Action.Add, expected: 0 },
   {
-    a: 9999999999999999,
+    a: 999999999999999,
     b: 1,
     action: Action.Add,
-    expected: 10000000000000000,
+    expected: 1000000000000000,
   },
   {
-    a: -9999999999999999,
+    a: -999999999999999,
     b: -1,
     action: Action.Add,
-    expected: -10000000000000000,
+    expected: -1000000000000000,
   },
 
   { a: 5, b: 3, action: Action.Subtract, expected: 2 },
@@ -28,10 +28,10 @@ const testCases = [
   { a: 0, b: 100, action: Action.Multiply, expected: 0 },
   { a: 100, b: 0, action: Action.Multiply, expected: 0 },
   {
-    a: -9999999999999999,
+    a: -999999999999999,
     b: 0.5,
     action: Action.Multiply,
-    expected: -4999999999999999.5,
+    expected: -499999999999999.5,
   },
 
   { a: 6, b: 3, action: Action.Divide, expected: 2 },

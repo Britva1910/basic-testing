@@ -1,7 +1,8 @@
 import { mockOne, mockTwo, mockThree, unmockedFunction } from './index';
 
 jest.mock('./index', () => {
-  const originalModule = jest.requireActual<typeof import('./index')>('./index');
+  const originalModule =
+    jest.requireActual<typeof import('./index')>('./index');
   return {
     ...originalModule,
     mockOne: jest.fn(),
@@ -15,7 +16,7 @@ describe('partial mocking', () => {
     mockOne();
     mockTwo();
     mockThree();
-    
+
     expect(mockOne).toHaveBeenCalled();
     expect(mockTwo).toHaveBeenCalled();
     expect(mockThree).toHaveBeenCalled();

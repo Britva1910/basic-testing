@@ -43,8 +43,8 @@ describe('doStuffByInterval', () => {
 
   test('should set interval with provided callback and timeout', () => {
     const callback = jest.fn();
-    const interval = 1000; 
-    
+    const interval = 1000;
+
     doStuffByInterval(callback, interval);
 
     expect(callback).not.toBeCalled();
@@ -61,7 +61,7 @@ describe('doStuffByInterval', () => {
   test('should call callback multiple times after multiple intervals', () => {
     const callback = jest.fn();
 
-    const interval = 1000; 
+    const interval = 1000;
     doStuffByInterval(callback, interval);
 
     expect(callback).not.toBeCalled();
